@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment4_trangnguyen.FXMLDocumentController">
+   <children>
+      <VBox layoutX="23.0" layoutY="14.0" prefHeight="359.0" prefWidth="497.0">
+         <children>
+            <HBox prefHeight="84.0" prefWidth="559.0" spacing="20.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="507.0" text="ADD MEMBER" textFill="#ff5100">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="572.0">
+               <children>
+                  <Label text="Name">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="name">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="nameBlanked" textFill="RED">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="549.0">
+               <children>
+                  <Label text="Job">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="job" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="45.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label fx:id="jobBlank" textFill="#eb0404">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="572.0">
+               <children>
+                  <Label text="Notes">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="note">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="clear" mnemonicParsing="false" onAction="#handleButtonClear" style="-fx-background-color: red;" text="Clear" textFill="#fffdfd">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Button fx:id="addToCrew" mnemonicParsing="false" onAction="#handleButtonAdd" text="Add to crew">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="150.0" top="20.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+      <VBox layoutX="601.0" layoutY="4.0" prefHeight="495.0" prefWidth="498.0">
+         <children>
+            <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="383.0" text="Label">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="crewMember" alignment="TOP_LEFT" prefHeight="266.0" prefWidth="496.0" text="Empty" />
+            <HBox prefHeight="52.0" prefWidth="511.0">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="98.0" text="Enter No #">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="showCrewMem" />
+                  <Button fx:id="search" mnemonicParsing="false" onAction="#handdleButtonSearch" text="Search">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="searchResult" alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="498.0" textFill="#140942">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="51.0" prefWidth="457.0">
+               <children>
+                  <Button fx:id="save" mnemonicParsing="false" onAction="#handleButtonSave" style="-fx-background-color: Blue;" text="Save to file" textFill="#e4e4e4">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="readFile" mnemonicParsing="false" onAction="#handdleButtonReadFile" text="Read File">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
